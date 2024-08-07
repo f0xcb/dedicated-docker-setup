@@ -5,7 +5,7 @@ portainer.helmm.dev {
 
 tickets.squadbrothers.de {
     tls tim@f0xcb.cc
-    reverse_proxy discord-tickets:8169
+    reverse_proxy discord-tickets_bot:8169
 }
 
 wl.squadbrothers.de {
