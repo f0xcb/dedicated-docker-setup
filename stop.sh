@@ -25,8 +25,8 @@ function stopPortainer() {
 }
 
 function main() {
-    startCaddy
-    startPortainer
+    stopPortainer
+    stopCaddy
 }
 
 main "$@"
