@@ -2,3 +2,18 @@ portainer.helmm.dev {
     tls tim@f0xcb.cc
     reverse_proxy portainer:9000
 }
+
+tickets.squadbrothers.de {
+    tls tim@f0xcb.cc
+    reverse_proxy discord-tickets:8169
+}
+
+wl.squadbrothers.de {
+    tls tim@f0xcb.cc
+    reverse_proxy 5.252.100.30:27113
+}
+
+whitelister.squadbrothers.de {
+    tls tim@f0xcb.cc
+    reverse_proxy 5.252.100.30:27113
+}
