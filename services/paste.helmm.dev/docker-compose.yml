@@ -1,0 +1,20 @@
+services:
+  wastebin:
+    image: 'quxfoo/wastebin:latest'
+    container_name: wastebin
+    environment:
+      - WASTEBIN_DATABASE_PATH=/data/state.db
+    volumes:
+      - './data:/data'
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.wastebin.rule=Host(`paste.helmm.dev`)"
+      - "traefik.http.routers.wastebin.entrypoints=websecure"
+      - "traefik.http.services.wastebin.loadbalancer.server.port=8088" # Correct internal port
+      - "traefik.http.routers.wastebin.tls.certresolver=leresolver"
+
+networks:
+  traefik:
+    external: true
